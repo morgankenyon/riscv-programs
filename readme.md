@@ -4,9 +4,27 @@ This repo will contain simple programs that I write in riscv assembly. Not sure 
 
 ## Running on Ubuntu
 
-I have a make file that uses the qemu toolchain, if you can't run that binary (get errors), you can run the following command.
+Running on ubuntu is as easy as:
+
+1. Running makefile for intended file
+2. Running the binary output
+
+### Makefile
+
+The makefile outputs a binary that you can run. You need to call the make file with the program that you want to run.
+
+To run the `hello.s` file:
+```
+make filename=hello
+```
+
+This outputs a binary file called `target`, which is used in the next step:
+
+### Running
+
+To run the output, just use the following command:
 
 ```
-qemu-riscv64 ./hello
+qemu-riscv64 ./target
 ```
 
